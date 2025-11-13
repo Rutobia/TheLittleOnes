@@ -470,7 +470,7 @@
 	desc = "A steel axe of Aavnic make that combines a deadly weapon with a walking stick - hence its pointed end. It has a flat head that fits the hand comfortably, and it's usable for chopping and smashing. You could probably stab someone if you tried really hard."
 	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/mace/smash/flataxe, /datum/intent/mace/warhammer/pick)
 	gripped_intents = list(/datum/intent/axe/cut/battle ,/datum/intent/axe/chop/battle, /datum/intent/stab, /datum/intent/mace/warhammer/pick)
-	force_wielded = 26	//No damage changes for wielded/unwielded
+	force_wielded = 28	//No damage changes for wielded/unwielded
 	icon_state = "valaska"
 	demolition_mod = 2.5
 	walking_stick = TRUE
