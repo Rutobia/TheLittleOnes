@@ -33,6 +33,9 @@
 		/obj/item/bodypart/taur/canine,
 		/obj/item/bodypart/taur/drake,
 		/obj/item/bodypart/taur/feline,
+		/obj/item/bodypart/taur/kitsune,
+		/obj/item/bodypart/taur/venard,
+		/obj/item/bodypart/taur/otie,
 	)
 	default_features = MANDATORY_FEATURE_LIST
 	use_skintones = TRUE

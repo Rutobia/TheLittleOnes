@@ -129,6 +129,37 @@ GLOBAL_LIST_INIT(taur_types, subtypesof(/obj/item/bodypart/taur))
 
 	offset_x = -16
 	taur_icon_state = "feline_s"
+	taur_markings_state = "feline_markings"
+	clip_mask_state = "clip_mask_saiga"
+
+	has_taur_color = TRUE
+
+/obj/item/bodypart/taur/kitsune
+	name = "Kitsune Body"
+
+	offset_x = -16
+	taur_icon_state = "kitsune_s"
+	taur_markings_state = "kitsune_markings"
+	clip_mask_state = "clip_mask_saiga"
+
+	has_taur_color = TRUE
+
+/obj/item/bodypart/taur/venard
+	name = "Venard Body"
+
+	offset_x = -16
+	taur_icon_state = "venard_s"
+	taur_markings_state = "venard_markings"
+	clip_mask_state = "clip_mask_saiga"
+
+	has_taur_color = TRUE
+
+/obj/item/bodypart/taur/otie
+	name = "Otie Body"
+
+	offset_x = -16
+	taur_icon_state = "otie_s"
+	taur_markings_state = "otie_markings"
 	clip_mask_state = "clip_mask_saiga"
 
 	has_taur_color = TRUE

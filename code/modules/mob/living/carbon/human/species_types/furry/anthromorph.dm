@@ -37,6 +37,9 @@
 		/obj/item/bodypart/taur/canine,
 		/obj/item/bodypart/taur/drake,
 		/obj/item/bodypart/taur/feline,
+		/obj/item/bodypart/taur/kitsune,
+		/obj/item/bodypart/taur/venard,
+		/obj/item/bodypart/taur/otie,
 	)
 
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
