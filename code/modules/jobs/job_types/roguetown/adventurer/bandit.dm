@@ -99,9 +99,9 @@
 	var/player_count = length(GLOB.joined_player_list)
 	var/slots = 3
 
-	//Add 1 slot for every 12 players over 40.
-	if(player_count > 52)
-		var/extra = floor((player_count - 52) / 12)
+	//Add 1 slot for every 12 players over 30.
+	if(player_count > 42)
+		var/extra = floor((player_count - 42) / 12)
 		slots += extra
 
 	//3 slots minimum, 7 maximum.
