@@ -55,7 +55,7 @@
 	if(HAS_TRAIT(src, TRAIT_PARALYSIS))
 		var/list/wounds = get_wounds()
 		if(wounds.len > 0)
-			heal_wounds(1, list(/datum/wound/fracture/head, /datum/wound/fracture/head/brain))
+			heal_wounds(0.3, list(/datum/wound/fracture/head, /datum/wound/fracture/head/brain, /datum/wound/fracture/neck))
 
 	if(QDELETED(src)) // diseases can qdel the mob via transformations
 		return
