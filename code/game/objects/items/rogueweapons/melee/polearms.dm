@@ -1280,7 +1280,7 @@
 	throwforce = 20
 	max_integrity = 150
 	max_blade_int = 180
-	smeltresult = /obj/item/ingot/steel
+	smeltresult = /obj/item/ingot/silverblessed
 	is_silver = TRUE
 
 /obj/item/rogueweapon/woodstaff/sojourner/ComponentInitialize()
