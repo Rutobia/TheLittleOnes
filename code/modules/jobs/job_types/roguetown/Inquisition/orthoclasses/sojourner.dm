@@ -40,6 +40,8 @@
 	)
 	extra_context = "This subclass has a unique spell, in the form of an 'arcyne barrier'. So long as it's active, the user is immune to magic, yet still capable of casting it."
 
+	virtue_restrictions = list(/datum/virtue/combat/magical_potential)
+
 /datum/outfit/job/roguetown/sojourner
 	job_bitflag = BITFLAG_HOLY_WARRIOR
 
