@@ -106,7 +106,7 @@
 // any new sex commands that target new locations, will need to be added here, and given a unique bitflag define
 /datum/sex_controller/proc/update_all_accessible_body_zones()
 	access_zone_bitfield = SEX_ZONE_NULL
-	if(get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = FALSE, skipundies = TRUE))
+	if(bottom_exposed == TRUE || get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = FALSE, skipundies = TRUE))
 		access_zone_bitfield |= SEX_ZONE_GROIN
 	if(get_location_accessible(user, BODY_ZONE_PRECISE_GROIN, grabs = TRUE, skipundies = TRUE))
 		access_zone_bitfield |= SEX_ZONE_GROIN_GRAB
@@ -116,7 +116,7 @@
 		access_zone_bitfield |= SEX_ZONE_R_FOOT
 	if(get_location_accessible(user, BODY_ZONE_PRECISE_MOUTH, grabs = FALSE, skipundies = TRUE))
 		access_zone_bitfield |= SEX_ZONE_MOUTH
-	if(get_location_accessible(user, BODY_ZONE_CHEST, grabs = FALSE, skipundies = TRUE))
+	if(top_exposed == TRUE || get_location_accessible(user, BODY_ZONE_CHEST, grabs = FALSE, skipundies = TRUE))
 		access_zone_bitfield |= SEX_ZONE_CHEST
 	if(get_location_accessible(user, BODY_ZONE_CHEST, grabs = TRUE, skipundies = TRUE))
 		access_zone_bitfield |= SEX_ZONE_CHEST_GRAB
