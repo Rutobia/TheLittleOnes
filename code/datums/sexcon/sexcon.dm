@@ -630,7 +630,10 @@
 	if(user.getorganslot(ORGAN_SLOT_PENIS))
 		dat += " ~|~ <a href='?src=[REF(src)];task=manual_arousal_down'>\<</a> [manual_arousal_name] <a href='?src=[REF(src)];task=manual_arousal_up'>\></a>"
 	dat += "</center><center><a href='?src=[REF(src)];task=toggle_finished'>[do_until_finished ? "UNTIL IM FINISHED" : "UNTIL I STOP"]</a>"
-	dat += "</center><center><a href='?src=[REF(src)];task=toggle_top_exposed'>[top_exposed ? "TOP EXPOSED" : "TOP CONCEALED"] ~|~</a> <a href='?src=[REF(src)];task=toggle_bottom_exposed'>[bottom_exposed ? "BOTTOM EXPOSED" : "BOTTOM CONCEALED"]</a>"
+	if(user.getorganslot(ORGAN_SLOT_BREASTS))
+		dat += "</center><center><a href='?src=[REF(src)];task=toggle_top_exposed'>[top_exposed ? "TOP EXPOSED" : "TOP CONCEALED"]</a> ~|~ <a href='?src=[REF(src)];task=toggle_bottom_exposed'>[bottom_exposed ? "BOTTOM EXPOSED" : "BOTTOM CONCEALED"]</a>"
+	else
+		dat += "</center><center><a href='?src=[REF(src)];task=toggle_bottom_exposed'>[bottom_exposed ? "BOTTOM EXPOSED" : "BOTTOM CONCEALED"]</a>"
 	if(current_action && !desire_stop)
 		var/datum/sex_action/action = SEX_ACTION(current_action)
 		if(action.knot_on_finish && knot_penis_type())

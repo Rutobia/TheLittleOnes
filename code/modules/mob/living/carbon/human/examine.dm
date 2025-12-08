@@ -36,6 +36,7 @@
 	var/t_has = p_have()
 	var/t_is = p_are()
 	var/obscure_name = FALSE
+	var/bottom_is_exposed = FALSE
 	var/race_name = "<a href='?src=[REF(src)];species_lore=1'><u>[dna.species.name]</u></A>"
 	var/datum/antagonist/maniac/maniac = user.mind?.has_antag_datum(/datum/antagonist/maniac)
 	var/datum/antagonist/skeleton/skeleton = user.mind?.has_antag_datum(/datum/antagonist/skeleton)
@@ -1029,9 +1030,13 @@
 		. += span_info(line)
 
 	// for underwears that don't cover from the rear, genital descriptions are still shown
-	if(get_location_accessible(src, BODY_ZONE_PRECISE_GROIN) && src.underwear)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.sexcon)
+			bottom_is_exposed = H.sexcon.bottom_exposed
+	if(bottom_is_exposed == TRUE || get_location_accessible(src, BODY_ZONE_PRECISE_GROIN) && src.underwear)
 		//separate these conditions to not throw an error when no underwear is worn at all
-		if(user.InCone(src, turn(src.dir, 180)) && !src.underwear.covers_rear)
+		if(bottom_is_exposed == TRUE || user.InCone(src, turn(src.dir, 180)) && !src.underwear.covers_rear)
 			var/list/descriptors = list()
 			//only populate the descriptors for genitals you have
 			if(src.getorganslot(ORGAN_SLOT_PENIS))
